@@ -100,7 +100,7 @@
     .section-title {
       text-align: center;
       font-size: 1.8rem;
-      margin-bottom: 2rem;
+      margin-bottom: 0.5rem;
       position: relative;
     }
 
@@ -115,8 +115,9 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1.5rem;
+      margin-top: 2rem;
     }
 
     .card {
@@ -127,6 +128,13 @@
       border: 1px solid #eee;
       display: flex;
       flex-direction: column;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background-color: #f0f0f0;
     }
 
     .card-body {
@@ -157,7 +165,7 @@
     .price {
       font-weight: bold;
       color: var(--primary);
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     .btn-order {
@@ -214,48 +222,137 @@
     <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20place%20an%20order." class="btn-main">Order via WhatsApp</a>
   </section>
 
-  <section class="products">
-    <h2 class="section-title">Our Tasty Selection</h2>
+  <section class="products" id="shop">
+    <h2 class="section-title">Our Snack Menu</h2>
+    <p style="text-align: center; color: var(--gray); font-size: 0.95rem; margin-top: 0.5rem;">
+      All packs start from <strong>Ushs 5,000</strong> and above. Tap any item to order directly on WhatsApp!
+    </p>
     
     <div class="grid">
+      <!-- Daddies -->
       <div class="card">
-        <div class="card-body">
-          <div>
-            <h3>Roasted Groundnuts</h3>
-            <p>Freshly roasted, salted groundnuts cooked to golden perfection.</p>
-          </div>
-          <div class="price-row">
-            <span class="price">Ushs 2,000 / pack</span>
-            <a href="https://wa.me/256765876289?text=Hello,%20I%20want%20to%20order%20Roasted%20Groundnuts." class="btn-order">Order</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body">
-          <div>
-            <h3>Red Skin Peanuts</h3>
-            <p>Crunchy, high-quality fried red skin peanuts with rich flavor.</p>
-          </div>
-          <div class="price-row">
-            <span class="price">Ushs 2,500 / pack</span>
-            <a href="https://wa.me/256765876289?text=Hello,%20I%20want%20to%20order%20Red%20Skin%20Peanuts." class="btn-order">Order</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
+        <img src="images/daddies.jpg" alt="Crunchy Daddies" class="card-img">
         <div class="card-body">
           <div>
             <h3>Crunchy Daddies</h3>
-            <p>Sweet, golden-brown snack cubes made fresh daily for maximum crunch.</p>
+            <p>Golden-brown, sweet, crunchy snack cubes packed fresh daily.</p>
           </div>
           <div class="price-row">
-            <span class="price">Ushs 3,000 / pack</span>
-            <a href="https://wa.me/256765876289?text=Hello,%20I%20want%20to%20order%20Crunchy%20Daddies." class="btn-order">Order</a>
+            <span class="price">From Ushs 5,000</span>
+            <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20order%20Daddies." class="btn-order">Order</a>
           </div>
         </div>
       </div>
+
+      <!-- Roasted G.nuts -->
+      <div class="card">
+        <img src="images/roasted-gnuts.jpg" alt="Roasted G.Nuts" class="card-img">
+        <div class="card-body">
+          <div>
+            <h3>Roasted G.Nuts</h3>
+            <p>Freshly roasted, crisp groundnuts seasoned to perfection.</p>
+          </div>
+          <div class="price-row">
+            <span class="price">From Ushs 5,000</span>
+            <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20order%20Roasted%20G.Nuts." class="btn-order">Order</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coated G.nuts -->
+      <div class="card">
+        <img src="images/coated-gnuts.jpg" alt="Coated G.Nuts" class="card-img">
+        <div class="card-body">
+          <div>
+            <h3>Coated G.Nuts</h3>
+            <p>Crunchy flour-coated groundnuts with a rich, savoury finish.</p>
+          </div>
+          <div class="price-row">
+            <span class="price">From Ushs 5,000</span>
+            <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20order%20Coated%20G.Nuts." class="btn-order">Order</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Potato Crisps -->
+      <div class="card">
+        <img src="images/potato-crisps.jpg" alt="Potato Crisps" class="card-img">
+        <div class="card-body">
+          <div>
+            <h3>Potato Crisps</h3>
+            <p>Thinly sliced, golden, and extra crispy potato chips.</p>
+          </div>
+          <div class="price-row">
+            <span class="price">From Ushs 5,000</span>
+            <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20order%20Potato%20Crisps." class="btn-order">Order</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gongya Crisps -->
+      <div class="card">
+        <img src="images/gongya-crisps.jpg" alt="Gongya Crisps" class="card-img">
+        <div class="card-body">
+          <div>
+            <h3>Gongya Crisps</h3>
+            <p>Deliciously fried plantain/gonja chips packed with natural flavor.</p>
+          </div>
+          <div class="price-row">
+            <span class="price">From Ushs 5,000</span>
+            <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20order%20Gongya%20Crisps." class="btn-order">Order</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Maize Soft Corns -->
+      <div class="card">
+        <img src="images/maize-soft-corns.jpg" alt="Maize Soft Corns" class="card-img">
+        <div class="card-body">
+          <div>
+            <h3>Maize Soft Corns</h3>
+            <p>Lightly roasted soft corn bites, perfect for quick snacking.</p>
+          </div>
+          <div class="price-row">
+            <span class="price">From Ushs 5,000</span>
+            <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20order%20Maize%20Soft%20Corns." class="btn-order">Order</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bagiya -->
+      <div class="card">
+        <img src="images/bagiya.jpg" alt="Bagiya" class="card-img">
+        <div class="card-body">
+          <div>
+            <h3>Bagiya</h3>
+            <p>Classic spiced and crunchy bagiya strands made for snack lovers.</p>
+          </div>
+          <div class="price-row">
+            <span class="price">From Ushs 5,000</span>
+            <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20order%20Bagiya." class="btn-order">Order</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cookies -->
+      <div class="card">
+        <img src="images/cookies.jpg" alt="Fresh Cookies" class="card-img">
+        <div class="card-body">
+          <div>
+            <h3>Fresh Cookies</h3>
+            <p>Oven-baked, rich cookies crafted for sweet indulgence.</p>
+          </div>
+          <div class="price-row">
+            <span class="price">From Ushs 5,000</span>
+            <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20order%20Cookies." class="btn-order">Order</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: #fff3cd; border: 1px solid #ffeeba; border-radius: 8px; padding: 1rem; text-align: center; margin-top: 2.5rem; color: #856404;">
+      <strong>Need bulk orders or custom quantities?</strong><br>
+      Contact us directly on WhatsApp and we will package it to your taste!
     </div>
   </section>
 
