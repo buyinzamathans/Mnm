@@ -1,368 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M & M SNACKS PARADISE | Taste Greatness</title>
-  <style>
-    :root {
-      --primary: #a30808;
-      --dark: #121212;
-      --light: #fdfaf6;
-      --gold: #d4af37;
-      --gray: #666;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-      background-color: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: var(--dark);
-      color: white;
-      padding: 1rem 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    }
-
-    .logo {
-      font-size: 1.2rem;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    .logo span {
-      color: var(--primary);
-    }
-
-    .btn-header {
-      background-color: var(--primary);
-      color: white;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 0.9rem;
-    }
-
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=1000&q=80') center/cover;
-      color: white;
-      text-align: center;
-      padding: 4rem 1rem;
-    }
-
-    .hero h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      color: var(--gold);
-      margin-bottom: 1.5rem;
-      font-style: italic;
-    }
-
-    .btn-main {
-      display: inline-block;
-      background-color: #25D366;
-      color: white;
-      padding: 0.8rem 1.8rem;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      font-size: 1rem;
-      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-    }
-
-    .products {
-      padding: 3rem 5%;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-      position: relative;
-    }
-
-    .section-title::after {
-      content: '';
-      display: block;
-      width: 50px;
-      height: 3px;
-      background-color: var(--primary);
-      margin: 0.5rem auto 0;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      border: 1px solid #eee;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      background-color: #f0f0f0;
-    }
-
-    .card-body {
-      padding: 1.2rem;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.3rem;
-    }
-
-    .card p {
-      color: var(--gray);
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    .price-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .price {
-      font-weight: bold;
-      color: var(--primary);
-      font-size: 1rem;
-    }
-
-    .btn-order {
-      background-color: var(--dark);
-      color: white;
-      text-decoration: none;
-      padding: 0.4rem 0.8rem;
-      border-radius: 5px;
-      font-size: 0.85rem;
-    }
-
-    .footer {
-      background-color: var(--dark);
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-    }
-
-    .footer p {
-      margin-bottom: 0.5rem;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      text-decoration: none;
-      font-size: 1.5rem;
-      z-index: 1000;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M & M Snacks Paradise</title>
 </head>
 <body>
 
-  <header>
-    <div class="logo">M & M <span>SNACKS</span></div>
-    <a href="https://wa.me/256765876289" class="btn-header">Order Now</a>
-  </header>
+    <header>
+        <h1>M & M Snacks Paradise</h1>
+        <p>Delicious Homemade Snacks & Treats</p>
+    </header>
 
-  <section class="hero">
-    <h1>M & M Snacks Paradise</h1>
-    <p>"Taste greatness"</p>
-    <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20place%20an%20order." class="btn-main">Order via WhatsApp</a>
-  </section>
+    <main>
+        <section class="product-grid">
 
-  <section class="products" id="shop">
-    <h2 class="section-title">Our Snack Menu</h2>
-    <p style="text-align: center; color: var(--gray); font-size: 0.95rem; margin-top: 0.5rem;">
-      All packs start from <strong>Ushs 5,000</strong> and above. Tap any item to order directly on WhatsApp!
-    </p>
-    
-    <div class="grid">
-      <!-- Daddies -->
-      <div class="card">
-        <img src="images/daddies.jpg" alt="Crunchy Daddies" class="card-img">
-        <div class="card-body">
-          <div>
-            <h3>Crunchy Daddies</h3>
-            <p>Golden-brown, sweet, crunchy snack cubes packed fresh daily.</p>
-          </div>
-          <div class="price-row">
-            <span class="price">From Ushs 5,000</span>
-            <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20order%20Daddies." class="btn-order">Order</a>
-          </div>
-        </div>
-      </div>
+            <div class="card">
+                <img src="MandM/Gnuts.jpg" alt="Groundnuts">
+                <div class="card-content">
+                    <h3>Fresh Groundnuts</h3>
+                    <p class="description">Crunchy, locally sourced, and perfectly roasted groundnuts.</p>
+                    <p class="price">UGX 2,000</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
 
-      <!-- Roasted G.nuts -->
-      <div class="card">
-        <img src="images/roasted-gnuts.jpg" alt="Roasted G.Nuts" class="card-img">
-        <div class="card-body">
-          <div>
-            <h3>Roasted G.Nuts</h3>
-            <p>Freshly roasted, crisp groundnuts seasoned to perfection.</p>
-          </div>
-          <div class="price-row">
-            <span class="price">From Ushs 5,000</span>
-            <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20order%20Roasted%20G.Nuts." class="btn-order">Order</a>
-          </div>
-        </div>
-      </div>
+            <div class="card">
+                <img src="MandM/coated gnuts.jpg" alt="Coated Groundnuts">
+                <div class="card-content">
+                    <h3>Coated Groundnuts</h3>
+                    <p class="description">Crispy flavored coating over premium roasted groundnuts.</p>
+                    <p class="price">UGX 3,000</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
 
-      <!-- Coated G.nuts -->
-      <div class="card">
-        <img src="images/coated-gnuts.jpg" alt="Coated G.Nuts" class="card-img">
-        <div class="card-body">
-          <div>
-            <h3>Coated G.Nuts</h3>
-            <p>Crunchy flour-coated groundnuts with a rich, savoury finish.</p>
-          </div>
-          <div class="price-row">
-            <span class="price">From Ushs 5,000</span>
-            <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20order%20Coated%20G.Nuts." class="btn-order">Order</a>
-          </div>
-        </div>
-      </div>
+            <div class="card">
+                <img src="MandM/Hardcorns-and-gnuts.jpg" alt="Hardcorns and Gnuts">
+                <div class="card-content">
+                    <h3>Hardcorns & G-Nuts Mix</h3>
+                    <p class="description">The perfect traditional mix of crunchy roasted corn and groundnuts.</p>
+                    <p class="price">UGX 2,500</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
 
-      <!-- Potato Crisps -->
-      <div class="card">
-        <img src="images/potato-crisps.jpg" alt="Potato Crisps" class="card-img">
-        <div class="card-body">
-          <div>
-            <h3>Potato Crisps</h3>
-            <p>Thinly sliced, golden, and extra crispy potato chips.</p>
-          </div>
-          <div class="price-row">
-            <span class="price">From Ushs 5,000</span>
-            <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20order%20Potato%20Crisps." class="btn-order">Order</a>
-          </div>
-        </div>
-      </div>
+            <div class="card">
+                <img src="MandM/baked-stuff 1.jpg" alt="Baked Pastries">
+                <div class="card-content">
+                    <h3>Fresh Baked Bites</h3>
+                    <p class="description">Golden, warm, oven-baked savory bites made fresh daily.</p>
+                    <p class="price">UGX 5,000</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
 
-      <!-- Gongya Crisps -->
-      <div class="card">
-        <img src="images/gongya-crisps.jpg" alt="Gongya Crisps" class="card-img">
-        <div class="card-body">
-          <div>
-            <h3>Gongya Crisps</h3>
-            <p>Deliciously fried plantain/gonja chips packed with natural flavor.</p>
-          </div>
-          <div class="price-row">
-            <span class="price">From Ushs 5,000</span>
-            <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20order%20Gongya%20Crisps." class="btn-order">Order</a>
-          </div>
-        </div>
-      </div>
+            <div class="card">
+                <img src="MandM/big bagiya.jpg" alt="Big Bagiya">
+                <div class="card-content">
+                    <h3>Big Bagiya Pack</h3>
+                    <p class="description">Crispy, spiced savory noodles packed for ultimate crunch.</p>
+                    <p class="price">UGX 4,000</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
 
-      <!-- Maize Soft Corns -->
-      <div class="card">
-        <img src="images/maize-soft-corns.jpg" alt="Maize Soft Corns" class="card-img">
-        <div class="card-body">
-          <div>
-            <h3>Maize Soft Corns</h3>
-            <p>Lightly roasted soft corn bites, perfect for quick snacking.</p>
-          </div>
-          <div class="price-row">
-            <span class="price">From Ushs 5,000</span>
-            <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20order%20Maize%20Soft%20Corns." class="btn-order">Order</a>
-          </div>
-        </div>
-      </div>
+            <div class="card">
+                <img src="MandM/daddies.jpg" alt="Daddies Snacks">
+                <div class="card-content">
+                    <h3>Classic Daddies</h3>
+                    <p class="description">Sweet, crunchy fried dough bites made using our signature recipe.</p>
+                    <p class="price">UGX 3,000</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
 
-      <!-- Bagiya -->
-      <div class="card">
-        <img src="images/bagiya.jpg" alt="Bagiya" class="card-img">
-        <div class="card-body">
-          <div>
-            <h3>Bagiya</h3>
-            <p>Classic spiced and crunchy bagiya strands made for snack lovers.</p>
-          </div>
-          <div class="price-row">
-            <span class="price">From Ushs 5,000</span>
-            <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20order%20Bagiya." class="btn-order">Order</a>
-          </div>
-        </div>
-      </div>
+        </section>
+    </main>
 
-      <!-- Cookies -->
-      <div class="card">
-        <img src="images/cookies.jpg" alt="Fresh Cookies" class="card-img">
-        <div class="card-body">
-          <div>
-            <h3>Fresh Cookies</h3>
-            <p>Oven-baked, rich cookies crafted for sweet indulgence.</p>
-          </div>
-          <div class="price-row">
-            <span class="price">From Ushs 5,000</span>
-            <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks,%20I%20would%20like%20to%20order%20Cookies." class="btn-order">Order</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div style="background: #fff3cd; border: 1px solid #ffeeba; border-radius: 8px; padding: 1rem; text-align: center; margin-top: 2.5rem; color: #856404;">
-      <strong>Need bulk orders or custom quantities?</strong><br>
-      Contact us directly on WhatsApp and we will package it to your taste!
-    </div>
-  </section>
-
-  <footer class="footer">
-    <p><strong>M & M SNACKS PARADISE</strong></p>
-    <p>Call / WhatsApp: 0765876289</p>
-    <p style="margin-top: 1rem; color: #888; font-size: 0.8rem;">Designed by Jahri Web Studios</p>
-  </footer>
-
-  <a href="https://wa.me/256765876289?text=Hello%20M%26M%20Snacks!" class="whatsapp-float" aria-label="Chat on WhatsApp">💬</a>
+    <footer>
+        <p>&copy; 2026 M & M Snacks Paradise. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
