@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M & M Snacks Paradise</title>
-<link rel="stylesheet" href="style.css">
-
+    <!-- Links to your CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
+        <h1>M & M Snacks Paradise</h1>
         <p>Delicious Homemade Snacks & Treats</p>
-<link rel="stylesheet" href="style.css">
-
     </header>
 
     <main>
@@ -90,26 +89,8 @@
         <p>&copy; 2026 M & M Snacks Paradise. All rights reserved.</p>
         <p>Designed by Jahri Web Studios</p>
     </footer>
-document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".card");
 
-    // Scroll reveal effect using Intersection Observer
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("reveal");
-            }
-        });
-    }, {
-        threshold: 0.15
-    });
-
-    cards.forEach((card, index) => {
-        // Stagger initial animations
-        card.style.transitionDelay = `${index * 0.08}s`;
-        observer.observe(card);
-    });
-});
-
+    <!-- Links to your JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
