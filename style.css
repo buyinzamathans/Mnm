@@ -53,40 +53,35 @@ body {
     text-align: center;
     overflow: hidden;
 
-    background: #17110e; /* Cleaned up base to prevent color clashing with logo */
+    background: #17110e; 
 
     border-bottom: 1px solid rgba(201, 154, 69, 0.18);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 }
 
-/* Giant atmospheric logo - Now clearly visible */
-
-.main-header::before {
-    content: "";
+/* Traditional Logo Placement */
+.logo-container {
     position: absolute;
-
-    width: min(520px, 90vw);
-    height: min(520px, 90vw);
-
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
-
-    background-image: url('MandM/logo.jpg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    /* Increased opacity and removed multiply blend mode for clarity */
-    opacity: 0.45;
-    filter: saturate(1.1) contrast(1.1);
-
-    z-index: 0;
+    top: 2rem;
+    left: 2.5rem;
+    z-index: 10;
 }
 
-/* Atmospheric lighting - Softened so it doesn't crush the logo */
+.brand-logo {
+    width: 80px; 
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--gold); 
+    transition: transform 0.3s ease;
+}
 
+.brand-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Atmospheric lighting */
 .main-header::after {
     content: "";
     position: absolute;
@@ -685,11 +680,15 @@ body {
         letter-spacing: -2px;
     }
 
-    /* Fixed logo size and opacity for smaller screens */
-    .main-header::before {
-        width: 88vw;
-        height: 88vw;
-        opacity: 0.38;
+    /* Target the newly placed logo for mobile */
+    .logo-container {
+        top: 1.2rem;
+        left: 1.2rem;
+    }
+
+    .brand-logo {
+        width: 60px;
+        height: 60px;
     }
 
     .pricing-banner {
