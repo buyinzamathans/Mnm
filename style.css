@@ -57,8 +57,6 @@ header h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
     display: flex;
     flex-direction: column;
-    
-    /* Animation initial state */
     opacity: 0;
     transform: translateY(30px);
 }
@@ -142,8 +140,8 @@ header h1 {
 }
 
 .whatsapp-icon {
-    width: 32px;
-    height: 32px;
+    width: 35px;
+    height: 35px;
 }
 
 /* Footer */
