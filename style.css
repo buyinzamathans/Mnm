@@ -1,7 +1,6 @@
 :root {
     --brand-gold: #f39c12;
     --brand-dark: #121418;
-    --brand-gradient: linear-gradient(145deg, #0f1115 0%, #2c3e50 100%);
     --bg-light: #f4f6f8;
     --text-main: #333;
     --text-muted: #666;
@@ -22,9 +21,11 @@ body {
     line-height: 1.6;
 }
 
-/* Redesigned Header */
+/* Updated Header Background */
 .main-header {
-    background: var(--brand-gradient);
+    background-image: linear-gradient(rgba(18, 20, 24, 0.85), rgba(44, 62, 80, 0.85)), url('MandM/hardcorns.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
     text-align: center;
     padding: 4.5rem 1rem 3.5rem;
@@ -41,11 +42,10 @@ body {
 .main-header p {
     font-size: 1.1rem;
     margin-top: 1.2rem;
-    color: #e0e0e0;
+    color: #f1f1f1;
     letter-spacing: 0.5px;
 }
 
-/* Artistic Pricing Banner */
 .pricing-banner {
     background-color: var(--brand-gold);
     color: #fff;
@@ -63,7 +63,6 @@ body {
     border-radius: 4px;
 }
 
-/* Layout for Products (Grid instead of Stacks) */
 .products-section {
     max-width: 1100px;
     margin: 0 auto;
@@ -87,7 +86,6 @@ body {
     border-radius: 2px;
 }
 
-/* The true Grid */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -95,7 +93,6 @@ body {
     margin-bottom: 4rem;
 }
 
-/* Card Design */
 .card {
     background: var(--card-bg);
     border-radius: 12px;
@@ -118,10 +115,57 @@ body {
     box-shadow: 0 12px 25px rgba(0,0,0,0.12);
 }
 
-.card-img {
+/* New Image Slider Styles */
+.card-slider {
+    position: relative;
     width: 100%;
     height: 200px;
+    overflow: hidden;
+    background: #e9ecef;
+}
+
+.slides {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.card-img {
+    min-width: 100%;
+    height: 200px;
     object-fit: cover;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(18, 20, 24, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    z-index: 2;
+    transition: background 0.3s;
+}
+
+.slider-btn:hover {
+    background-color: var(--brand-gold);
+}
+
+.slider-btn.prev {
+    left: 8px;
+}
+
+.slider-btn.next {
+    right: 8px;
 }
 
 .card-body {
@@ -173,7 +217,6 @@ body {
     background-color: var(--brand-gold);
 }
 
-/* WhatsApp Float */
 .whatsapp-float {
     position: fixed;
     bottom: 25px;
@@ -199,7 +242,6 @@ body {
     height: 35px;
 }
 
-/* Footer */
 .footer {
     background-color: var(--brand-dark);
     color: white;
