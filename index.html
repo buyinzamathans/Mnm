@@ -1,96 +1,161 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M & M Snacks Paradise</title>
-    <!-- Links to your CSS file -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+:root {
+    --primary-color: #f39c12;
+    --primary-hover: #d35400;
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-dark: #2c3e50;
+    --text-muted: #6c757d;
+    --whatsapp-color: #25d366;
+    --shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
 
-    <header>
-        <h1>M & M Snacks Paradise</h1>
-        <p>Delicious Homemade Snacks & Treats</p>
-    </header>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    <main>
-        <section class="product-grid">
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding-bottom: 60px;
+}
 
-            <div class="card">
-                <img src="MandM/Gnuts.jpg" alt="Groundnuts">
-                <div class="card-content">
-                    <h3>Fresh Groundnuts</h3>
-                    <p class="description">Crunchy, locally sourced, and perfectly roasted groundnuts.</p>
-                    <p class="price">Ushs 2,000</p>
-                    <button class="order-btn">Order Now</button>
-                </div>
-            </div>
+/* Header */
+header {
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+    background: linear-gradient(135deg, #111111 0%, #2c3e50 100%);
+    color: #ffffff;
+    margin-bottom: 2.5rem;
+}
 
-            <div class="card">
-                <img src="MandM/coated gnuts.jpg" alt="Coated Groundnuts">
-                <div class="card-content">
-                    <h3>Coated Groundnuts</h3>
-                    <p class="description">Crispy flavored coating over premium roasted groundnuts.</p>
-                    <p class="price">Ushs 3,000</p>
-                    <button class="order-btn">Order Now</button>
-                </div>
-            </div>
+header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
 
-            <div class="card">
-                <img src="MandM/Hardcorns-and-gnuts.jpg" alt="Hardcorns and Gnuts">
-                <div class="card-content">
-                    <h3>Hardcorns & G-Nuts Mix</h3>
-                    <p class="description">The perfect traditional mix of crunchy roasted corn and groundnuts.</p>
-                    <p class="price">Ushs 2,500</p>
-                    <button class="order-btn">Order Now</button>
-                </div>
-            </div>
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
 
-            <div class="card">
-                <img src="MandM/baked-stuff 1.jpg" alt="Baked Pastries">
-                <div class="card-content">
-                    <h3>Fresh Baked Bites</h3>
-                    <p class="description">Golden, warm, oven-baked savory bites made fresh daily.</p>
-                    <p class="price">Ushs 5,000</p>
-                    <button class="order-btn">Order Now</button>
-                </div>
-            </div>
+/* Enhanced Cards */
+.card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(30px);
+}
 
-            <div class="card">
-                <img src="MandM/big bagiya.jpg" alt="Big Bagiya">
-                <div class="card-content">
-                    <h3>Big Bagiya Pack</h3>
-                    <p class="description">Crispy, spiced savory noodles packed for ultimate crunch.</p>
-                    <p class="price">Ushs 4,000</p>
-                    <button class="order-btn">Order Now</button>
-                </div>
-            </div>
+.card.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-            <div class="card">
-                <img src="MandM/daddies.jpg" alt="Daddies Snacks">
-                <div class="card-content">
-                    <h3>Classic Daddies</h3>
-                    <p class="description">Sweet, crunchy fried dough bites made using our signature recipe.</p>
-                    <p class="price">Ushs 3,000</p>
-                    <button class="order-btn">Order Now</button>
-                </div>
-            </div>
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
 
-        </section>
-    </main>
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/YOURNUMBER" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-        <img src="whatsapp-icon.png" alt="Chat on WhatsApp" class="whatsapp-icon">
-    </a>
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
 
-    <footer>
-        <p>&copy; 2026 M & M Snacks Paradise. All rights reserved.</p>
-        <p>Designed by Jahri Web Studios</p>
-    </footer>
+.card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
 
-    <!-- Links to your JavaScript file -->
-    <script src="script.js"></script>
-</body>
-</html>
+.card-content .description {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.card-content .price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-hover);
+    margin-bottom: 1rem;
+}
+
+.order-btn {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.order-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--whatsapp-color);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem 1rem;
+    border-top: 1px solid #e9ecef;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+footer p:last-child {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-top: 0.3rem;
+}
